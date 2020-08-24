@@ -9,3 +9,8 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root")
 );
+
+// STEPS -------
+// - 1) Install my dependacies
+// - - redux, redux-thunk, react-redux, react-router-dom, redux-logger
+// - 2) Install redux, and create a store in the reducer
