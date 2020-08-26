@@ -1,15 +1,18 @@
 import React from "react";
+import { NavLink, Route } from "react-router-dom";
 import Profile from "./components/Profile";
+import Shots from "./components/Shots";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h5>Async Redux</h5>
-      </header>
-      <div></div>
-      <Profile />
+      <Route exact path="/">
+        <Profile />
+      </Route>
+      <Route exact path="/shots">
+        <Shots />
+      </Route>
     </div>
   );
 }

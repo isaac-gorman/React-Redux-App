@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+.button-wrapper {
+  width: 80%;
+  /* background: rgb(0, 255, 42); */
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  margin-top: 0px;
+}
+
+.prev,
+.next {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgb(199, 199, 199);
+  background: white;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.material-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(126, 126, 126);
+}
+
+.carousel-container {
+  width: 80%;
+  min-height: 600px;
+  /* margin: 50px auto; */
+  /*   background: #ccc; */
+  /* min-height: 200px; */
+  /* position: relative; */
+  /* background: red; */
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0 auto;
+  /* overflow-x: hidden; */
+}
+
+.track {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  overflow-x: scroll;
+  /* background: rgb(0, 255, 42); */
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+.card {
+  width: calc(100% / 2.15);
+  height: 90%;
+  flex-shrink: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 40px;
+  /* background: blue; */
+  display: flex;
+  flex-direction: column;
+  /* padding: 15px; */
+  /* box-sizing: border-box; */
+  border-radius: 12px;
+  box-shadow: 0px 4px 4px rgba(109, 109, 109, 0.25);
+}
+
+.img {
+  width: 100%;
+  border-radius: 12px 12px 0px 0px;
+
+  /* first value applies to top-left corner, second value applies to top-right corner, third value applies to bottom-right corner, and fourth value applies to bottom-left corner) */
+}

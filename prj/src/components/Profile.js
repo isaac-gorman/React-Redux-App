@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { getProfileData } from "../actions/actions";
+import { Link, Route } from "react-router-dom";
+import { getProfileData, getShotData } from "../actions/actions";
 import { connect } from "react-redux";
 import loading from "./loading.gif";
 
@@ -10,6 +11,10 @@ function Profile(props) {
     return props.getProfileData();
   }, []);
 
+  // function getShots(e) {
+  //   props.getShotData();
+  // }
+
   return (
     <div style={{ marginTop: "100px" }}>
       {props.isFetching ? (
@@ -18,7 +23,10 @@ function Profile(props) {
         <div>
           <img src={props.profileData.avatar_url} alt="image of isaac" />
           <h4>{props.profileData.name}</h4>
-          {/* <button onClick={}>View Dribbble Shots</button> */}
+          <Link to="/shots">
+            {" "}
+            <button> View Dribbble Shots</button>{" "}
+          </Link>
         </div>
       )}
       {console.log("I am profileData", props.profileData)}
@@ -33,4 +41,6 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, { getProfileData })(Profile);
+export default connect(mapStateToProps, { getProfileData, getShotData })(
+  Profile
+);

@@ -5,6 +5,7 @@ import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import logger from "redux-logger";
 import { reducer } from "./reducer/reducer";
+import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 
@@ -12,9 +13,11 @@ const store = createStore(reducer, applyMiddleware(thunk, logger));
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <Router>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </Router>
   </React.StrictMode>,
   document.getElementById("root")
 );
